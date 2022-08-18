@@ -375,7 +375,7 @@ class docker::service (
         ensure  => file,
         force   => true, #force rewrite storage configuration 
         content => template($storage_config_template),
-        notify  => $_manage_service,
+        # notify  => $_manage_service, # intentionally disabled
       }
     }
   }

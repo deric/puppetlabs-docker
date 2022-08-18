@@ -106,8 +106,6 @@ shared_examples 'service' do |params, facts|
       is_expected.to contain_file(params['storage_config']).with(
         'ensure'  => 'file',
         'force'   => true,
-      ).that_notifies(
-        manage_service,
       )
     }
   end
